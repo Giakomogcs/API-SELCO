@@ -1,7 +1,7 @@
 {
   "name": "api-selco",
   "version": "1.0.0",
-  "description": "",
+  "description": "Rastreabilidade berços da SELCO",
   "main": "index.js",
   "scripts": {
     "start": "node ./src/server.js",

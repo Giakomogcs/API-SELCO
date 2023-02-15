@@ -1,5 +1,5 @@
 const createBercos = `
-CREATE TABLE IF NOT EXISTS users (
+CREATE TABLE IF NOT EXISTS bercos (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   name VARCHAR,
   machine VARCHAR,
