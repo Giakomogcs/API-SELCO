@@ -88,7 +88,7 @@ class BercosController {
     const database = await sqliteConnection()
 
 
-      const berco = await database.get("SELECT name FROM bercos")
+      const berco = await database.all("SELECT * FROM bercos")
   
       return response.json({
         berco
