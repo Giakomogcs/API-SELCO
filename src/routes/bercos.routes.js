@@ -6,7 +6,7 @@ const bercosRoutes = Router()
 const bercosController = new BercosController()
 
 bercosRoutes.post("/", bercosController.create)
-//bercosRoutes.put("/:id", bercosController.update)
+bercosRoutes.put("/:name", bercosController.update)
 //bercosRoutes.delete("/:id", bercosController.delete)
 
 module.exports = bercosRoutes
