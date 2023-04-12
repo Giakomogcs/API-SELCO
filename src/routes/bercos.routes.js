@@ -9,6 +9,7 @@ bercosRoutes.post("/", bercosController.create)
 bercosRoutes.put("/:name", bercosController.update)
 bercosRoutes.get("/:name", bercosController.index)
 bercosRoutes.get("/", bercosController.show)
-bercosRoutes.delete("/", bercosController.delete)
+bercosRoutes.delete("/:name", bercosController.deleteOne)
+bercosRoutes.delete("/", bercosController.deleteAll)
 
 module.exports = bercosRoutes

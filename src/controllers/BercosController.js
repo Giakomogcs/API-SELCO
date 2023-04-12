@@ -53,16 +53,29 @@ class BercosController {
     return response.json("Update done successfully!")
   }
 
-  async delete(request,response) {
+  async deleteOne(request,response) {
     const {name} = request.params
     const database = await sqliteConnection()
 
+    if (name) {
+      await database.run(
+        `DELETE FROM bercos WHERE name = ${name}`)
+    }
+
+    return response.json("Successfully deleted berço")
+  }
+
+
+  async deleteAll(request,response) {
+    const database = await sqliteConnection()
+ 
     await database.run(
       'DELETE FROM bercos')
 
     return response.json("Successfully deleted berço")
   }
 
+  
   async index(request,response) {
 
     const {name} = request.params
