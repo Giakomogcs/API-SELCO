@@ -25,8 +25,8 @@ class BercosController {
   }
 
   async update(request, response){
-    const {machine, measure, measured} = request.body
-    const {name} = request.params
+    const {machine, measure, measured, name} = request.body
+    //const {name} = request.params
 
     const database = await sqliteConnection()
     const user = await database.get("SELECT * FROM bercos WHERE name = (?)", [name])
