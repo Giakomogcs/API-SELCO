@@ -89,9 +89,11 @@ class BercosController {
 
       const berco = await database.get("SELECT * FROM bercos WHERE name = (?)", [name])
   
-      return response.json({
-        berco
-      })
+      //return response.json({
+      //  berco
+      //})
+
+      return response.json(berco)
       
     }
   }
